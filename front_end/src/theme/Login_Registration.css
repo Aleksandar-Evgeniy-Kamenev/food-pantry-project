@@ -1,0 +1,62 @@
+.container {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  width: 90%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  justify-self: center;
+  align-content: center;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-container.card {
+  padding: 4rem 4rem;
+}
+
+.card {
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(235, 148, 8, 0.3);
+}
+
+.profile-img-card {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 10px;
+  display: block;
+  border-radius: 50%;
+}
+
+.login_button {
+  margin-top: 2rem;
+}
+
+.form_error_input {
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.form-control {
+  min-width: 250px;
+}
+
+.form_control_group_radio {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.radio_selector_reg {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.text_center {
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+.container_prolife {
+  margin: auto;
+}
+.container_prolife > * {
+  display: block;
+}
