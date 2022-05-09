@@ -60,3 +60,7 @@ label {
 .text_center {
   text-align: center;
 }
+
+.x-display {
+  display: none;
+}

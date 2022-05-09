@@ -64,6 +64,7 @@ import {
 import EventBus from './common/EventBus';
 import * as AuthService from './services/auth.service';
 import IUser from './types/IUser';
+import AddOffer from './screens/AddOffer/AddOffer';
 
 setupIonicReact();
 
@@ -98,6 +99,7 @@ const App: React.FC = () => {
       EventBus.remove('logout', logOut);
     };
   }, []);
+
   const logOut = () => {
     AuthService.logout();
     setShowCourierView(false);
@@ -163,42 +165,58 @@ const App: React.FC = () => {
 
       <IonReactRouter>
         <IonRouterOutlet id="primary">
+          {/* public routes */}
           <Route exact path="/home">
             <Home />
           </Route>
+
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+
           <Route exact path="/help">
             <Help />
           </Route>
+
           <Route exact path="/about">
             <About />
           </Route>
+
+          {/* any user routes */}
           <Route exact path="/settings">
-            <Settings />
+            {currentUser && <Settings />}
           </Route>
+
           <Route exact path="/profile">
-            <Profile />
+            {currentUser && <Profile />}
           </Route>
+
+          <Route exact path="/map">
+            {currentUser && <MapNav />}
+          </Route>
+
+          <Route exact path="/past">
+            {currentUser && <Past />}
+          </Route>
+          <Route exact path="/addoffer">
+            {showDonorView && <AddOffer />}
+          </Route>
+
+          {/* courier routes */}
           <Route exact path="/offers">
-            <Offers />
+            {showCourierView && <Offers />}
           </Route>
+
+          {/* donor routes */}
           <Route exact path="/donation">
             <Donation />
           </Route>
-          <Route exact path="/map">
-            <MapNav />
-          </Route>
-          <Route exact path="/past">
-            <Past />
-          </Route>
+
+          {/* work will be needed here to disallow access of route if loged in */}
           <Route exact path="/login" component={Login} />
+
           <Route exact path="/register">
             <Register />
-          </Route>
-          <Route exact path="/past">
-            <Past />
           </Route>
         </IonRouterOutlet>
       </IonReactRouter>

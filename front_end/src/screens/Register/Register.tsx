@@ -172,6 +172,7 @@ const Register: React.FC = () => {
                     />
                     <div className="form_control_group">
                       <IonButton type="submit" className="login_button">
+                        <input type="submit" className="x-display" />
                         Sign Up
                       </IonButton>
                     </div>

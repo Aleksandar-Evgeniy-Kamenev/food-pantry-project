@@ -121,6 +121,7 @@ const Login: React.FC<Props> = ({ history }) => {
 
                 <div className="form-group">
                   <IonButton type="submit" className="login_button">
+                    <input type="submit" className="x-display" />
                     Sign In
                   </IonButton>
                 </div>

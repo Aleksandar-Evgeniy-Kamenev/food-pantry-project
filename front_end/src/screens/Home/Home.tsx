@@ -119,7 +119,9 @@ const Home: React.FC = () => {
               </IonRow>
               <IonRow>
                 <IonText
-                  className={`ion-padding text-md ${isMobile ? 'center' : ''}`}
+                  className={`ion-padding text-md ${
+                    isMobile ? 'center' : ''
+                  } subtitle`}
                 >
                   You can make a difference! Be the change you want to see in
                   others

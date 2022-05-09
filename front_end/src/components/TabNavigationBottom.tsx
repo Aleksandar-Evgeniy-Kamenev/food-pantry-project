@@ -57,7 +57,7 @@ const TabNavigationBottom: React.FC = () => {
             </IonTabButton>
           )}
           {showDonorView && (
-            <IonTabButton>
+            <IonTabButton  tab="AddOffer" href="/addoffer">
               <IonIcon icon={listOutline} />
               <IonLabel>Add Offer</IonLabel>
             </IonTabButton>
@@ -71,7 +71,7 @@ const TabNavigationBottom: React.FC = () => {
             </IonTabButton>
           )}
 
-          <IonTabButton tab="home" href="/home">
+          <IonTabButton tab="Home" href="/home">
             <IonIcon icon={homeOutline} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
